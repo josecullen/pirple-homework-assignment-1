@@ -112,8 +112,8 @@ const handlers = {}
 // Hello handler
 handlers.hello = function(data, callback){
     var userName = data.queryStringObject.user
+    
     if (userName){
-        console.log(userName)
         callback(200, {'greeting': "Thanks "+ userName +" for test my API!"})
     }else{
         callback(200, {'greeting': "I don't know you, please tell me your name as a query param, like: '?user=Barbie'"})
